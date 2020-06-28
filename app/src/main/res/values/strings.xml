@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="Уфа">Уфа</string>
+    <string name="_25_c">+25 C</string>
+    <string name="_3">3 м/с</string>
+    <string name="clear">Сегодня: ясно, без осадков</string>
+    <string name="rain">Завтра: ожидается дождь</string>
+    <string name="_20_c">+20 C</string>
+    <string name="_20_00">20:00</string>
+    <string name="_22_c">+22 C</string>
+    <string name="_25_c">+25 C</string>
+    <string name="_12_00">12:00</string>
+    <string name="_18_00">18:00</string>
+    <string name="_17_c">+17 C</string>
+    <string name="tomorrow_weather">ПОГОДА НА ЗАВТРА</string>
+    <string name="desc">image</string>
+    <string name="Weather_time">ПОГОДА ПО ЧАСАМ</string>
+    <string name="_7">7 м/с</string>
+    <string name="_20_c">+20 C</string>
+    <string name="_8_00">8:00</string>
+</resources>

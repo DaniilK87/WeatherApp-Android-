@@ -77,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onMyClick(View view) {
+        Intent intent = new Intent(this,CityActivity.class);
+        startActivity(intent);
 
     }
 }

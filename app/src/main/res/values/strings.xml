@@ -24,4 +24,6 @@
     <string name="searchCheckBox">Где тепло и солнечно</string>
     <string name="searchInput">AutoCompleteTextView</string>
     <string name="selectionCity">Выбор города</string>
+    <string name="exit1">TODO</string>
+    <string name="inputCity">Введите город</string>
 </resources>

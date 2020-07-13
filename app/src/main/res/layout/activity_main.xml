@@ -9,20 +9,6 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/weatherByhour"
-        android:textColor="#0C0C0C"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.598" />
-
-    <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,6 +21,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.377" />
+
+    <fragment
+        android:id="@+id/weatherFrag"
+        android:name="com.example.weatherapp.hourWeatherFragment"
+        android:layout_width="414dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="570dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tableLayout4"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
@@ -91,152 +89,12 @@
         app:srcCompat="@drawable/sun"
         android:contentDescription="@string/desc" />
 
-    <TableLayout
-        android:id="@+id/tableLayout2"
-        android:layout_width="396dp"
-        android:layout_height="280dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="69dp"
-                android:layout_height="wrap_content"
-                android:text="@string/time1"
-                android:textColor="#131313"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:text="@string/time2"
-                android:textColor="#0B0A0A"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="82dp"
-                android:layout_height="wrap_content"
-                android:text="@string/time3"
-                android:textColor="#0B0A0A"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="77dp"
-                android:layout_height="wrap_content"
-                android:text="@string/time4"
-                android:textColor="#100F0F"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="91dp"
-                android:layout_height="wrap_content"
-                android:text="@string/time6"
-                android:textColor="#0B0A0A"
-                android:textSize="24sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/temp1"
-                android:textColor="#0C0C0C"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/temp2"
-                android:textColor="#090909"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/temp3"
-                android:textColor="#070707"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/temp4"
-                android:textColor="#050505"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/temp5"
-                android:textColor="#0B0A0A"
-                android:textSize="24sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:contentDescription="@string/desc"
-                android:id="@+id/imageView10"
-                android:layout_width="58dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/sun" />
-
-            <ImageView
-                android:contentDescription="@string/desc"
-                android:id="@+id/imageView9"
-                android:layout_width="79dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/sun" />
-
-            <ImageView
-                android:contentDescription="@string/desc"
-                android:id="@+id/imageView8"
-                android:layout_width="67dp"
-                android:layout_height="37dp"
-                app:srcCompat="@drawable/sun" />
-
-            <ImageView
-                android:contentDescription="@string/desc"
-                android:id="@+id/imageView7"
-                android:layout_width="73dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/sun" />
-
-            <ImageView
-                android:contentDescription="@string/desc"
-                android:id="@+id/imageView6"
-                android:layout_width="52dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/sun" />
-        </TableRow>
-
-    </TableLayout>
 
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="400dp"
         android:layout_height="69dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tableLayout2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -259,27 +117,6 @@
                 android:text="@string/temp6"
                 android:textColor="#090909"
                 android:textSize="24sp" />
-
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </TableLayout>
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -355,14 +192,67 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#0F1010"
         android:onClick="onMyClick"
         android:text="@string/selectionCity"
-        android:textColor="#0C0C0C"
+        android:textColor="#EFE9E9"
+        android:textColorHighlight="#0C0C0C"
+        android:textColorLink="#090909"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.019" />
+
+    <TableLayout
+        android:id="@+id/tableLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="-92dp">
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="155dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="300dp"
+        android:onClick="Change"
+        android:text="@string/showHourWeather"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="155dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="300dp"
+        android:onClick="Change"
+        android:text="@string/closeHourWeather"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weatherByhour"
+        android:textColor="#0C0C0C"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

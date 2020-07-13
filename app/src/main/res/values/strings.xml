@@ -26,4 +26,9 @@
     <string name="selectionCity">Выбор города</string>
     <string name="exit1">TODO</string>
     <string name="inputCity">Введите город</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hourWeatherFrag">Button</string>
+    <string name="showHourWeather">показать</string>
+    <string name="closeHourWeather">скрыть</string>
 </resources>

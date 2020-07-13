@@ -2,6 +2,9 @@ package com.example.weatherapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -79,6 +82,21 @@ public class MainActivity extends AppCompatActivity {
     public void onMyClick(View view) {
         Intent intent = new Intent(this,CityActivity.class);
         startActivity(intent);
+    }
 
+    public void Change (View view) {
+        Fragment fragment = null;
+
+        switch (view.getId()) {
+            case  R.id.button3:
+                fragment = new hourWeatherFragment();
+                break;
+            case R.id.button4:
+                fragment = new backfroundFragment();
+        }
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.weatherFrag,fragment);
+        ft.commit();
     }
 }

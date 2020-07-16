@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorAccent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#D2EAE7"
     tools:context=".hourWeatherFragment">
 
     <TableLayout
         android:id="@+id/tableLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="103dp"
+        android:layout_width="381dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,8 +20,8 @@
         app:layout_constraintVertical_bias="1.0">
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView16"
@@ -151,9 +151,6 @@
         </TableRow>
 
     </TableLayout>
-
-
-
 
 
 </FrameLayout>

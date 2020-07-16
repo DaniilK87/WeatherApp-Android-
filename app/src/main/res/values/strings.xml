@@ -31,4 +31,8 @@
     <string name="hourWeatherFrag">Button</string>
     <string name="showHourWeather">показать</string>
     <string name="closeHourWeather">скрыть</string>
+    <string name="temp30C">30С</string>
+    <string name="temp1card">Line1</string>
+    <string name="tempCard1">TextView</string>
+    <string name="termcv">termCV</string>
 </resources>

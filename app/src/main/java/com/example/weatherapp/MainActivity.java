@@ -5,17 +5,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     final String LOG_TAG = "myLogs";
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,19 @@ public class MainActivity extends AppCompatActivity {
         toast.setGravity(Gravity.CENTER_HORIZONTAL,0,0);
         toast.show();
         Log.d(LOG_TAG,"onCreate");
+
+        ArrayList<ExampleItem> exampleList = new ArrayList<>();
+        exampleList.add(new ExampleItem(R.drawable.thermometer,"+30C"));
+        exampleList.add(new ExampleItem(R.drawable.thermometer,"+29C"));
+        exampleList.add(new ExampleItem(R.drawable.thermometer,"+21C"));
+
+        recyclerView = findViewById(R.id.tempRV);
+        recyclerView.setHasFixedSize(true);
+        manager = new LinearLayoutManager(this);
+        adapter = new ExampleAdapter(exampleList);
+
+        recyclerView.setLayoutManager(manager);
+        recyclerView.setAdapter(adapter);
     }
 
     @Override
@@ -88,10 +107,10 @@ public class MainActivity extends AppCompatActivity {
         Fragment fragment = null;
 
         switch (view.getId()) {
-            case  R.id.button3:
+            case  R.id.shouHourWeather:
                 fragment = new hourWeatherFragment();
                 break;
-            case R.id.button4:
+            case R.id.sendHourWeather:
                 fragment = new backfroundFragment();
         }
         FragmentManager fm = getSupportFragmentManager();

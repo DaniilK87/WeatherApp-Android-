@@ -10,11 +10,17 @@ import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
+import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.regex.Pattern;
 
 public class CityActivity extends AppCompatActivity {
     private CheckBox checkBox;
-    private String city1 = "Ufa";
-    private AutoCompleteTextView autoCompleteTextView;
+    private TextInputLayout textInputCity;
+    Pattern checkCityName = Pattern.compile("Ufa\", \"Kazan\", \"Perm");
     private final static String[] city = new String[]{"Ufa", "Kazan", "Perm"};
 
 
@@ -23,10 +29,35 @@ public class CityActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_city);
         checkBox = findViewById(R.id.checkBox);
-        autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, city);
-        autoCompleteTextView.setAdapter(adapter);
+        textInputCity = findViewById(R.id.cityInputLayout);
+        textInputCity.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (hasFocus) return;
+                TextView tv = (TextView) view;
+                validate(tv,checkCityName,"Такого города нет в базе");
+            }
+        });
+    }
+
+    // проверка вводимого текста при выборе города
+    private void validate(TextView tv, Pattern checkCityName, String message) {
+        String value = tv.getText().toString();
+        if (checkCityName.matcher(value).matches()) {
+            hideError(tv);
+        } else {
+            showError(tv, message);
+        }
+    }
+
+    //показываем ошибку
+    private void showError(TextView tv, String message) {
+        tv.setError(message);
+    }
+
+    // прячем ошибку
+    private void hideError(TextView tv) {
+        tv.setError(null);
     }
 
     public void onClick1(View view) {
@@ -36,7 +67,7 @@ public class CityActivity extends AppCompatActivity {
         if (checkBox.isChecked()) {
             startActivity(browser);
         }
-
+        Snackbar.make(view,"Поиск города",Snackbar.LENGTH_LONG).show();
 
     }
 

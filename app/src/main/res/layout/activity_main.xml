@@ -35,7 +35,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textUfa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -49,7 +49,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textToday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/clear"
@@ -60,10 +60,10 @@
         app:layout_constraintHorizontal_bias="0.88"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.232" />
+        app:layout_constraintVertical_bias="0.24000001" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textTomorrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/rain"
@@ -74,7 +74,7 @@
         app:layout_constraintHorizontal_bias="0.83"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27" />
+        app:layout_constraintVertical_bias="0.29000002" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -137,38 +137,39 @@
     </TableLayout>
 
     <TableLayout
+        android:id="@+id/tableLayout3"
         android:layout_width="248dp"
         android:layout_height="103dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.565">
+        app:layout_constraintVertical_bias="0.060000002">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ImageView
-                android:contentDescription="@string/desc"
                 android:id="@+id/imageView13"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:contentDescription="@string/desc"
                 app:srcCompat="@drawable/thermometer" />
 
             <ImageView
-                android:contentDescription="@string/desc"
                 android:id="@+id/imageView12"
                 android:layout_width="wrap_content"
                 android:layout_height="54dp"
+                android:contentDescription="@string/desc"
                 app:srcCompat="@drawable/wind" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView17"
@@ -188,14 +189,15 @@
         </TableRow>
     </TableLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button2"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#0F1010"
         android:onClick="onMyClick"
         android:text="@string/selectionCity"
-        android:textColor="#EFE9E9"
+        android:textColor="#100F0F"
         android:textColorHighlight="#0C0C0C"
         android:textColorLink="#090909"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -214,26 +216,34 @@
 
     </TableLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button3"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="155dp"
         android:layout_height="42dp"
         android:layout_marginTop="300dp"
         android:onClick="Change"
         android:text="@string/showHourWeather"
+        android:textColor="#100F0F"
+        android:textColorHighlight="#0C0C0C"
+        android:textColorLink="#090909"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button4"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="155dp"
         android:layout_height="42dp"
         android:layout_marginTop="300dp"
         android:onClick="Change"
         android:text="@string/closeHourWeather"
+        android:textColor="#100F0F"
+        android:textColorHighlight="#0C0C0C"
+        android:textColorLink="#090909"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.85"

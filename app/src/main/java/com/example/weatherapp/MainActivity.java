@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +15,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
     final String LOG_TAG = "myLogs";
+    //private RecyclerView recyclerView;
+    //private RecyclerView.Adapter mAdapter;
+    //private RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case  R.id.button3:
                 fragment = new hourWeatherFragment();
+                Snackbar.make(view,"Показываю погоду по часам в течении суток",Snackbar.LENGTH_INDEFINITE).show();
                 break;
             case R.id.button4:
                 fragment = new backfroundFragment();

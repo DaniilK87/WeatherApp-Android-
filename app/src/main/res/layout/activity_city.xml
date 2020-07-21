@@ -30,13 +30,14 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
         android:text="@string/searchCheckBox"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32999998" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -53,8 +54,8 @@
         app:srcCompat="@drawable/cross" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="407dp"
-        android:layout_height="492dp"
+        android:layout_width="401dp"
+        android:layout_height="356dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="19dp"
         android:layout_marginEnd="3dp"
@@ -62,18 +63,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        app:layout_constraintVertical_bias="0.81" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cityInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-        android:layout_width="249dp"
-        android:textColor="#0C0C0C"
-        android:layout_height="68dp"
+        android:layout_width="253dp"
+        android:layout_height="101dp"
         android:layout_marginEnd="46dp"
         android:layout_marginBottom="22dp"
         android:background="#F0F4F4"
         android:backgroundTint="#F3F3F3"
+        android:textColor="#0C0C0C"
         android:textColorHint="@android:color/black"
         app:errorEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -85,10 +87,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/cityTextInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="237dp"
+            android:layout_height="54dp"
             android:hint="@string/inputCity"
             android:textColor="#0C0C0C"
+            android:textColorHighlight="#131313"
             android:textColorHint="#090909"
             android:textColorLink="#131313" />
     </com.google.android.material.textfield.TextInputLayout>

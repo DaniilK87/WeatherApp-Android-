@@ -100,6 +100,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
+            android:id="@+id/tomorrowWeatherTale"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -137,7 +138,7 @@
     </TableLayout>
 
     <TableLayout
-        android:id="@+id/tableLayout3"
+        android:id="@+id/todayWeatherTable"
         android:layout_width="248dp"
         android:layout_height="103dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -217,7 +218,7 @@
     </TableLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button3"
+        android:id="@+id/showHourWeather"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="155dp"
         android:layout_height="42dp"
@@ -234,11 +235,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button4"
+        android:id="@+id/closeHourWeather"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="155dp"
         android:layout_height="42dp"
         android:layout_marginTop="300dp"
+        android:background="#FFFFFF"
         android:onClick="Change"
         android:text="@string/closeHourWeather"
         android:textColor="#100F0F"

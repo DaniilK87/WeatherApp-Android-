@@ -20,8 +20,8 @@ import java.util.regex.Pattern;
 public class CityActivity extends AppCompatActivity {
     private CheckBox checkBox;
     private TextInputLayout textInputCity;
-    Pattern checkCityName = Pattern.compile("Ufa\", \"Kazan\", \"Perm");
-    private final static String[] city = new String[]{"Ufa", "Kazan", "Perm"};
+    //Pattern checkCityName = Pattern.compile("Ufa\", \"Kazan\", \"Perm");
+    private String cityName = "Ufa";
 
 
     @Override
@@ -30,17 +30,10 @@ public class CityActivity extends AppCompatActivity {
         setContentView(R.layout.activity_city);
         checkBox = findViewById(R.id.checkBox);
         textInputCity = findViewById(R.id.cityInputLayout);
-        textInputCity.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean hasFocus) {
-                if (hasFocus) return;
-                TextView tv = (TextView) view;
-                validate(tv,checkCityName,"Такого города нет в базе");
-            }
-        });
+
     }
 
-    // проверка вводимого текста при выборе города
+    /*// проверка вводимого текста при выборе города
     private void validate(TextView tv, Pattern checkCityName, String message) {
         String value = tv.getText().toString();
         if (checkCityName.matcher(value).matches()) {
@@ -58,7 +51,7 @@ public class CityActivity extends AppCompatActivity {
     // прячем ошибку
     private void hideError(TextView tv) {
         tv.setError(null);
-    }
+    }*/
 
     public void onClick1(View view) {
         Uri address = Uri.parse("https://weather.rambler.ru/world/kuba/");
@@ -66,6 +59,10 @@ public class CityActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         if (checkBox.isChecked()) {
             startActivity(browser);
+        }
+        if (!textInputCity.equals(cityName)) {
+            TextInputLayout til = (TextInputLayout) findViewById(R.id.cityInputLayout);
+            til.setError("Города в базе нет");
         }
         Snackbar.make(view,"Поиск города",Snackbar.LENGTH_LONG).show();
 

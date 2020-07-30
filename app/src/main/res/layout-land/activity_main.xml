@@ -38,7 +38,7 @@
 
     <fragment
         android:id="@+id/weatherFrag"
-        android:name="com.example.weatherapp.hourWeatherFragment"
+        android:name="com.example.Activity.hourWeatherFragment"
         android:layout_width="375dp"
         android:layout_height="139dp"
         android:layout_marginTop="250dp"
@@ -51,7 +51,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textUfa"
+        android:id="@+id/cityNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
@@ -93,7 +93,7 @@
         app:layout_constraintVertical_bias="0.33" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewGeneral"
         android:layout_width="106dp"
         android:layout_height="89dp"
         android:contentDescription="@string/desc"

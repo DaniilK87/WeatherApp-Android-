@@ -1,27 +1,32 @@
-package com.example.weatherapp;
+package com.example.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
+import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
 
-import java.util.regex.Pattern;
-
-public class CityActivity extends AppCompatActivity {
+ public class CityActivity extends AppCompatActivity {
     private CheckBox checkBox;
     private TextInputLayout textInputCity;
-    //Pattern checkCityName = Pattern.compile("Ufa\", \"Kazan\", \"Perm");
     private String cityName = "Ufa";
+    private Button serverButton;
+    private WebView webView;
+    private static final String TAG = "WebBrowser";
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager manager;
+    final String LOG_TAG = "myLogs";
 
 
     @Override
@@ -33,25 +38,7 @@ public class CityActivity extends AppCompatActivity {
 
     }
 
-    /*// проверка вводимого текста при выборе города
-    private void validate(TextView tv, Pattern checkCityName, String message) {
-        String value = tv.getText().toString();
-        if (checkCityName.matcher(value).matches()) {
-            hideError(tv);
-        } else {
-            showError(tv, message);
-        }
-    }
 
-    //показываем ошибку
-    private void showError(TextView tv, String message) {
-        tv.setError(message);
-    }
-
-    // прячем ошибку
-    private void hideError(TextView tv) {
-        tv.setError(null);
-    }*/
 
     public void onClick1(View view) {
         Uri address = Uri.parse("https://weather.rambler.ru/world/kuba/");
@@ -65,11 +52,13 @@ public class CityActivity extends AppCompatActivity {
             til.setError("Города в базе нет");
         }
         Snackbar.make(view,"Поиск города",Snackbar.LENGTH_LONG).show();
+        Log.d(LOG_TAG,"Тут что то не так3");
 
     }
-
+    // закрытие CityActivity
     public void exitCity(View view) {
         finish();
     }
+
 }
 

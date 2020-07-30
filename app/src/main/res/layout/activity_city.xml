@@ -2,11 +2,23 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cityConstrainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/blue"
     android:foregroundTint="#F4EEEE"
     tools:context=".CityActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cityRecyclerView"
+        android:layout_width="352dp"
+        android:layout_height="404dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84000003" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button"
@@ -53,19 +65,6 @@
         app:layout_constraintVertical_bias="0.023"
         app:srcCompat="@drawable/cross" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="401dp"
-        android:layout_height="356dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox"
-        app:layout_constraintVertical_bias="0.81" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cityInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
@@ -73,10 +72,9 @@
         android:layout_height="101dp"
         android:layout_marginEnd="46dp"
         android:layout_marginBottom="22dp"
-        android:background="#F0F4F4"
-        android:backgroundTint="#F3F3F3"
+        android:background="@drawable/blue"
         android:textColor="#0C0C0C"
-        android:textColorHint="@android:color/black"
+        app:boxStrokeColor="#130101"
         app:errorEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,6 +87,7 @@
             android:id="@+id/cityTextInput"
             android:layout_width="237dp"
             android:layout_height="54dp"
+            android:background="@drawable/blue"
             android:hint="@string/inputCity"
             android:textColor="#0C0C0C"
             android:textColorHighlight="#131313"

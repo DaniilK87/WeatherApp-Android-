@@ -2,16 +2,17 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2EAE7"
+    android:background="@drawable/blue"
     tools:context=".hourWeatherFragment">
 
     <TableLayout
-        android:id="@+id/tableLayout2"
-        android:layout_width="381dp"
-        android:layout_height="100dp"
+        android:id="@+id/weatherOfHourLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="117dp"
         android:layout_marginBottom="100dp"
+        android:background="@drawable/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
@@ -27,6 +28,7 @@
                 android:id="@+id/textView16"
                 android:layout_width="69dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/time1"
                 android:textColor="#131313"
                 android:textSize="24sp" />
@@ -35,6 +37,7 @@
                 android:id="@+id/textView15"
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/time2"
                 android:textColor="#0B0A0A"
                 android:textSize="24sp" />
@@ -43,6 +46,7 @@
                 android:id="@+id/textView14"
                 android:layout_width="82dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/time3"
                 android:textColor="#0B0A0A"
                 android:textSize="24sp" />
@@ -51,6 +55,7 @@
                 android:id="@+id/textView13"
                 android:layout_width="77dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/time4"
                 android:textColor="#100F0F"
                 android:textSize="24sp" />
@@ -59,6 +64,7 @@
                 android:id="@+id/textView12"
                 android:layout_width="91dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/time6"
                 android:textColor="#0B0A0A"
                 android:textSize="24sp" />
@@ -73,6 +79,7 @@
                 android:id="@+id/textView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/temp1"
                 android:textColor="#0C0C0C"
                 android:textSize="24sp" />
@@ -81,6 +88,7 @@
                 android:id="@+id/textView22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/temp2"
                 android:textColor="#090909"
                 android:textSize="24sp" />
@@ -89,6 +97,7 @@
                 android:id="@+id/textView21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/temp3"
                 android:textColor="#070707"
                 android:textSize="24sp" />
@@ -97,6 +106,7 @@
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/temp4"
                 android:textColor="#050505"
                 android:textSize="24sp" />
@@ -105,6 +115,7 @@
                 android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/temp5"
                 android:textColor="#0B0A0A"
                 android:textSize="24sp" />
@@ -119,6 +130,7 @@
                 android:layout_width="58dp"
                 android:layout_height="match_parent"
                 android:contentDescription="@string/desc"
+                android:gravity="center"
                 app:srcCompat="@drawable/sun" />
 
             <ImageView
@@ -126,6 +138,7 @@
                 android:layout_width="79dp"
                 android:layout_height="match_parent"
                 android:contentDescription="@string/desc"
+                android:gravity="center"
                 app:srcCompat="@drawable/sun" />
 
             <ImageView
@@ -133,6 +146,7 @@
                 android:layout_width="67dp"
                 android:layout_height="37dp"
                 android:contentDescription="@string/desc"
+                android:gravity="center"
                 app:srcCompat="@drawable/sun" />
 
             <ImageView
@@ -140,6 +154,7 @@
                 android:layout_width="73dp"
                 android:layout_height="match_parent"
                 android:contentDescription="@string/desc"
+                android:gravity="center"
                 app:srcCompat="@drawable/sun" />
 
             <ImageView
@@ -147,6 +162,7 @@
                 android:layout_width="52dp"
                 android:layout_height="match_parent"
                 android:contentDescription="@string/desc"
+                android:gravity="center"
                 app:srcCompat="@drawable/sun" />
         </TableRow>
 
